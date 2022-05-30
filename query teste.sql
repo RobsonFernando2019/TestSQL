@@ -7,8 +7,8 @@ INNER JOIN tb_Status AS b ON a.idStatus = b.idStatus GROUP BY(b.dsStatus);
 -- 2. Com base no modelo acima, construa um comando SQL que liste a maior data de andamento por número de processo, com processos encerrados no ano de 2013.
 
 SELECT MAX(a.dtAndamento) FROM tb_Andamento AS a  
-INNER JOIN  tb_processo AS b on b.idProcesso = a.idProcesso 
-and b.dtEncerramento > '2013-01-01';
+INNER JOIN  tb_processo AS b ON b.idProcesso = a.idProcesso 
+AND b.dtEncerramento > '2013-01-01';
 
 
 -- 3.Com base no modelo acima, construa um comando SQL que liste a quantidade de Data de Encerramento agrupada por ela mesma onde a quantidade da contagem seja maior que 5.
